@@ -42,7 +42,7 @@ Open a JavaScript file in the `src/scripts` directory and modify it as you wish.
 ## Special thanks
 Special thanks go to the following resources:
 
-- https://dribbble.com/shots/1966404--Watch-Free-Templates
+ - https://dribbble.com/shots/1966404--Watch-Free-Templates
  - https://github.com/icons8/flat-color-icons
  - http://www.julessdesign.com/portfolio/mobile-ui-ux-design/iphone-6s-free-psd-mockup-4-angles-of-view-in-4-colors/
  - https://www.invisionapp.com/do
