@@ -1,0 +1,191 @@
+
+/*
+ * Typography, links, text and header related styles
+ */
+
+/* Typography fonts */
+
+/* Default */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+}
+
+.typography-1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+}
+
+.typography-2 {
+  font-family: 'Open Sans', sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* Links, text and headers */
+
+a {
+  transition: all 0.3s ease 0s;
+}
+
+a.link {
+  color: $link-color-dark;
+  background-color: transparentize($link-color-dark, 0.8);
+}
+
+a.link:hover,
+a.link:active,
+a.link:focus {
+  color: lighten($link-color-dark, 20);
+  background-color: transparent;
+}
+
+.text-light {
+  color: $light-color;
+
+  .text-secondary {
+    color: darken($light-color, 30);
+  }
+
+  a.link {
+    color: $link-color-light;
+  }
+
+  a.link:hover,
+  a.link:active,
+  a.link:focus {
+    color: darken($link-color-light, 20);
+  }
+
+  hr {
+    border-top: 1px solid rgba(255,255,255,.2);
+  }
+}
+
+.text-dark {
+  color: $dark-color;
+
+  .text-secondary {
+    color: lighten($dark-color, 30);
+  }
+}
+
+h3 {
+  margin: 2rem 0;
+}
+
+h1, h2, h3, h4, h5 {
+  .tag {
+    position: relative;
+    top: -3px;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  .display-1 {
+    font-size: $display4-size;
+  }
+  .display-2 {
+    font-size: $display4-size;
+  }
+  .display-3 {
+    font-size: $display4-size;
+  }
+  .display-4 {
+    font-size: $display4-size;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .display-1 {
+    font-size: $display4-size;
+  }
+  .display-2 {
+    font-size: $display4-size;
+  }
+  .display-3 {
+    font-size: $display4-size;
+  }
+  .display-4 {
+    font-size: $display4-size;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .display-1 {
+    font-size: $display2-size;
+  }
+  .display-2 {
+    font-size: $display3-size;
+  }
+  .display-3 {
+    font-size: $display4-size;
+  }
+  .display-4 {
+    font-size: $display4-size;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .display-1 {
+    font-size: $display1-size;
+  }
+  .display-2 {
+    font-size: $display2-size;
+  }
+  .display-3 {
+    font-size: $display3-size;
+  }
+  .display-4 {
+    font-size: $display4-size;
+  }
+}
+
+.text-xs {
+  font-size: 0.5rem !important;
+}
+
+.text-s {
+  font-size: 1rem !important;
+}
+
+.text-m {
+  font-size: 1.5rem !important;
+}
+
+.text-l {
+  font-size: 2rem !important;
+}
+
+.text-xl {
+  font-size: 2.5rem !important;
+}
+
+.text-xxl {
+  font-size: 3rem !important;
+}
+
+.text-xs,
+.text-s,
+.text-m,
+.text-l,
+.text-xl,
+.text-xxl {
+  i {
+    vertical-align: text-bottom;
+  }
+}

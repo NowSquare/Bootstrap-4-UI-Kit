@@ -1,0 +1,155 @@
+
+/*
+ * Image jumbotron related styles
+ */
+
+.image-jumbotron {
+  margin-bottom: $jumbotron-padding;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include border-radius($border-radius-lg);
+
+  .image-jumbotron-overlay {
+    @include border-radius($border-radius-lg);
+  }
+
+  .image-jumbotron-padding {
+    padding: $jumbotron-padding ($jumbotron-padding / 2);
+  }
+
+  @include media-breakpoint-down(sm) {
+    .image-jumbotron-padding {
+      padding: ($jumbotron-padding / 2);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .image-jumbotron-padding {
+      padding: ($jumbotron-padding * 2);
+    }
+  }
+
+  .lead {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(xs) {
+    .lead {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .lead {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .lead {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    h1,h2,h3 {
+      text-align: center;
+    }
+  }
+
+  .btn {
+    margin-right: 1rem;
+  }
+
+  .text-xs-center,
+  .text-sm-center,
+  .text-md-center,
+  .text-lg-center,
+  .text-xl-center {
+
+    .btn {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+   }
+
+  .text-xs-right,
+  .text-sm-right,
+  .text-md-right,
+  .text-lg-right,
+  .text-xl-right {
+    .btn {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  li.media {
+    margin: 3rem auto;
+  }
+
+  /* Flex vertical align bottom */
+
+  @include media-breakpoint-up(xs) {
+    &.img-bottom-xs {
+      .row,
+      .row > .img-container {
+        display: flex;
+      }
+  
+      .row > .img-container > .img-fluid {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &.img-bottom-sm {
+      .row,
+      .row > .img-container {
+        display: flex;
+      }
+  
+      .row > .img-container > .img-fluid {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.img-bottom-lg {
+      .row,
+      .row > .img-container {
+        display: flex;
+      }
+  
+      .row > .img-container > .img-fluid {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  /* Position buttons below each other on small sceen sizes */
+
+  @include media-breakpoint-down(sm) {
+    .btn {
+      width: 100%;
+      margin: 0 0 1rem 0 !important;
+    }
+  }
+
+  /* Enlarge font icons */
+  .media-list i {
+    font-size:56px;
+  }
+}

@@ -1,0 +1,102 @@
+
+/*
+ * Footer related styles
+ */
+
+.footer {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .list-unstyled li {
+    line-height: 1.75rem;
+  }
+
+  .list-unstyled a {
+    line-height: 0.75rem;
+    font-weight: 400;
+  }
+
+  .list-unstyled li ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .list-unstyled li ul li {
+    list-style: square;
+  }
+
+  .list-unstyled li ul li a {
+    font-weight: 100;
+  }
+
+  .text-secondary {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    a {
+      color: darken($dark-color, 10);
+     font-weight: bold;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: $dark-color;
+    }
+  }
+
+  &.text-light {
+    .text-secondary {
+      a {
+        color: darken($light-color, 10);
+      }
+
+      a:hover,
+      a:active,
+      a:focus {
+        color: $light-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-overlay {
+    padding: 2rem 0;
+  }
+
+  &.footer-padding-l {
+    .footer-overlay {
+      padding: 3rem 0;
+    }
+  }
+
+  &.footer-padding-xl {
+    .footer-overlay {
+      padding: 4.5rem 0;
+    }
+  }
+
+  &.footer-padding-xxl {
+    .footer-overlay {
+      padding: 6rem 0;
+    }
+  }
+
+  .footer-padding {
+    padding: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .footer-padding {
+      padding: 1rem 0;
+    }
+  }
+}

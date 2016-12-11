@@ -1,0 +1,136 @@
+
+/*
+ * Header related styles
+ */
+
+.header {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .header-overlay {
+    position: relative;
+
+    * {
+      z-index: 1;
+    }
+
+    .particles-js-canvas-el {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 0 !important;
+    }
+  }
+
+  .header-padding {
+    padding: 4rem 0;
+  }
+
+  .header-padding-l {
+    padding: 6rem 0;
+  }
+
+  .header-padding-xl {
+    padding: 8rem 0;
+  }
+
+  .header-padding-xxl {
+    padding: 10rem 0;
+  }
+
+  .header-padding-xxxl {
+    padding: 14rem 0;
+  }
+
+  .header-padding-xxxxl {
+    padding: 18rem 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .header-padding {
+      padding: 2rem;
+    }
+  }
+
+  .lead {
+    margin: 2rem 0;
+    font-size: 1rem;
+  }
+
+  @include media-breakpoint-up(xs) {
+    .lead {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .lead {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .lead {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .lead {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    h1,h2,h3 {
+      text-align: center;
+    }
+  }
+
+  .btn {
+    margin-right: 1rem;
+  }
+
+  .text-xs-center,
+  .text-sm-center,
+  .text-md-center,
+  .text-lg-center,
+  .text-xl-center {
+
+    .btn {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+   }
+
+  .text-xs-right,
+  .text-sm-right,
+  .text-md-right,
+  .text-lg-right,
+  .text-xl-right {
+    .btn {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  li.media {
+    margin: 3rem auto;
+  }
+
+  /* Position buttons below each other on small sceen sizes */
+
+  @include media-breakpoint-down(sm) {
+    .btn {
+      width: 100%;
+      margin: 0 0 1rem 0 !important;
+    }
+  }
+
+  /* Enlarge font icons */
+  .media-list i {
+    font-size:56px;
+  }
+}

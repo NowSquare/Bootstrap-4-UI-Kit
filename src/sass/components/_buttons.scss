@@ -1,0 +1,272 @@
+
+/*
+ * Button related styles
+ */
+
+.btn-xlg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(1.25rem, 2rem, 1.75rem, $btn-border-radius-lg);
+}
+
+.btn-pill {
+  border-radius: 3rem !important;
+}
+
+.btn-ghost {
+  @include button-variant($btn-dark-ghost-color, $btn-ghost-color, $btn-ghost-color);
+}
+
+.btn-outline-ghost {
+  @include button-outline-variant($btn-ghost-color);
+}
+
+.btn-dark-ghost {
+  @include button-variant($btn-ghost-color, $btn-dark-ghost-color, $btn-dark-ghost-color);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active,
+.btn-ghost:focus {
+  border-color: $btn-dark-ghost-color !important;
+  background-color: $btn-dark-ghost-color !important;
+  color: $btn-ghost-color !important;
+}
+
+.btn-dark-ghost:hover,
+.btn-dark-ghost:active,
+.btn-dark-ghost:focus {
+  border-color: $btn-dark-ghost-color !important;
+  background-color: transparent !important;
+  color: $btn-dark-ghost-color !important;
+}
+
+.btn-outline-ghost:hover,
+.btn-outline-ghost:active,
+.btn-outline-ghost:focus {
+  color: $btn-dark-ghost-color !important;
+  border-color: $btn-ghost-color !important;
+}
+
+.btn-outline-dark-ghost {
+  @include button-outline-variant($btn-dark-ghost-color);
+}
+
+.btn-outline-dark-ghost:hover,
+.btn-outline-dark-ghost:active,
+.btn-outline-dark-ghost:focus {
+  color: $btn-ghost-color !important;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-warning,
+.btn-outline-danger,
+.btn-outline-ghost,
+.btn-outline-red,
+.btn-outline-pink,
+.btn-outline-purple,
+.btn-outline-deep-purple,
+.btn-outline-indigo,
+.btn-outline-blue,
+.btn-outline-light-blue,
+.btn-outline-cyan,
+.btn-outline-teal,
+.btn-outline-green,
+.btn-outline-light-green,
+.btn-outline-lime,
+.btn-outline-yellow,
+.btn-outline-amber,
+.btn-outline-orange,
+.btn-outline-deep-orange,
+.btn-outline-brown,
+.btn-outline-grey,
+.btn-outline-blue-grey,
+.btn-outline-dark-ghost,
+.btn-dark-ghost {
+  border-width: 2px;
+  @include button-size(calc(.5rem - 1px), calc(1rem - 1px), $font-size-base, $btn-border-radius);
+
+}
+
+.btn-outline-primary.btn-sm,
+.btn-outline-secondary.btn-sm,
+.btn-outline-success.btn-sm,
+.btn-outline-info.btn-sm,
+.btn-outline-warning.btn-sm,
+.btn-outline-danger.btn-sm,
+.btn-outline-ghost.btn-sm,
+.btn-outline-red.btn-sm,
+.btn-outline-pink.btn-sm,
+.btn-outline-purple.btn-sm,
+.btn-outline-deep-purple.btn-sm,
+.btn-outline-indigo.btn-sm,
+.btn-outline-blue.btn-sm,
+.btn-outline-light-blue.btn-sm,
+.btn-outline-cyan.btn-sm,
+.btn-outline-teal.btn-sm,
+.btn-outline-green.btn-sm,
+.btn-outline-light-green.btn-sm,
+.btn-outline-lime.btn-sm,
+.btn-outline-yellow.btn-sm,
+.btn-outline-amber.btn-sm,
+.btn-outline-orange.btn-sm,
+.btn-outline-deep-orange.btn-sm,
+.btn-outline-brown.btn-sm,
+.btn-outline-grey.btn-sm,
+.btn-outline-blue-grey.btn-sm,
+.btn-outline-dark-ghost.btn-sm,
+.btn-dark-ghost.btn-sm {
+  border-width: 2px;
+  @include button-size(calc(.25rem - 1px), calc(.5rem - 1px), $font-size-sm, $btn-border-radius-sm);
+}
+
+.btn-outline-primary.btn-lg,
+.btn-outline-secondary.btn-lg,
+.btn-outline-success.btn-lg,
+.btn-outline-info.btn-lg,
+.btn-outline-warning.btn-lg,
+.btn-outline-danger.btn-lg,
+.btn-outline-ghost.btn-lg,
+.btn-outline-red.btn-lg,
+.btn-outline-pink.btn-lg,
+.btn-outline-purple.btn-lg,
+.btn-outline-deep-purple.btn-lg,
+.btn-outline-indigo.btn-lg,
+.btn-outline-blue.btn-lg,
+.btn-outline-light-blue.btn-lg,
+.btn-outline-cyan.btn-lg,
+.btn-outline-teal.btn-lg,
+.btn-outline-green.btn-lg,
+.btn-outline-light-green.btn-lg,
+.btn-outline-lime.btn-lg,
+.btn-outline-yellow.btn-lg,
+.btn-outline-amber.btn-lg,
+.btn-outline-orange.btn-lg,
+.btn-outline-deep-orange.btn-lg,
+.btn-outline-brown.btn-lg,
+.btn-outline-grey.btn-lg,
+.btn-outline-blue-grey.btn-lg,
+.btn-outline-dark-ghost.btn-lg,
+.btn-dark-ghost.btn-lg {
+  border-width: 2px;
+  @include button-size(calc(.75rem - 1px), calc(1.5rem - 1px), $font-size-lg, $btn-border-radius-lg);
+}
+
+.btn-outline-primary.btn-xlg,
+.btn-outline-secondary.btn-xlg,
+.btn-outline-success.btn-xlg,
+.btn-outline-info.btn-xlg,
+.btn-outline-warning.btn-xlg,
+.btn-outline-danger.btn-xlg,
+.btn-outline-ghost.btn-xlg,
+.btn-outline-red.btn-xlg,
+.btn-outline-pink.btn-xlg,
+.btn-outline-purple.btn-xlg,
+.btn-outline-deep-purple.btn-xlg,
+.btn-outline-indigo.btn-xlg,
+.btn-outline-blue.btn-xlg,
+.btn-outline-light-blue.btn-xlg,
+.btn-outline-cyan.btn-xlg,
+.btn-outline-teal.btn-xlg,
+.btn-outline-green.btn-xlg,
+.btn-outline-light-green.btn-xlg,
+.btn-outline-lime.btn-xlg,
+.btn-outline-yellow.btn-xlg,
+.btn-outline-amber.btn-xlg,
+.btn-outline-orange.btn-xlg,
+.btn-outline-deep-orange.btn-xlg,
+.btn-outline-brown.btn-xlg,
+.btn-outline-grey.btn-xlg,
+.btn-outline-blue-grey.btn-xlg,
+.btn-outline-dark-ghost.btn-xlg,
+.btn-dark-ghost.btn-xlg {
+  border-width: 2px;
+  @include button-size(calc(1.25rem - 1px), calc(2rem - 1px), 1.75rem, $btn-border-radius-lg);
+}
+
+/* Material colors */
+
+@each $color in $color-list {
+
+  $color-name: nth($color, 1);
+  $color-value: nth($color, 2);
+
+  .btn-#{$color-name} {
+    @if $color-name == "yellow" {
+      @include button-variant($dark-color, $color-value, $color-value);
+    } @else {
+      @include button-variant($light-color, $color-value, $color-value);
+    }
+  }
+
+  .btn-outline-#{$color-name} {
+    @include button-outline-variant($color-value);
+
+    @if $color-name == "yellow" {
+      color: darken($color-value, 20);
+      &:hover,
+      &:active,
+      &:focus {
+        color: $dark-color;
+      }
+    }
+  }
+}
+
+.btn-container .btn:last-of-type {
+  margin-bottom: 0 !important;        
+}
+
+@include media-breakpoint-down(sm) {
+  .btn-stack-sm {
+    .btn {
+      width: 100%;
+      margin: 0 0 1rem 0 !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;        
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .btn-stack-md {
+    .btn {
+      width: 100%;
+      margin: 0 0 1rem 0 !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;        
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .btn-stack-lg {
+    .btn {
+      width: 100%;
+      margin: 0 0 1rem 0 !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;        
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .btn-stack-xl {
+    .btn {
+      width: 100%;
+      margin: 0 0 1rem 0 !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;        
+      }
+    }
+  }
+}

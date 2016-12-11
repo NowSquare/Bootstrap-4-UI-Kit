@@ -1,0 +1,32 @@
+
+/*
+ * Form related styles
+ */
+
+.form {
+  select.form-control {
+    height: 2.5rem;
+  }
+
+  &.form-rounded {
+    .form-control {
+      border-radius: 0.75rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .form-control:focus {
+      border-color: transparent;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.text-light {
+  .form {
+
+    &.form-rounded {
+      .form-control:focus {
+        box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+      }
+    }
+  }
+}

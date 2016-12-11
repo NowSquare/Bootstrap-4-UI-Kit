@@ -1,0 +1,104 @@
+
+/*
+ * List (<ul>) related styles
+ */
+
+.list-light,
+.list-light a {
+  color: darken($light-color, 20);
+}
+
+.list-light a:hover,
+.list-light a:active,
+.list-light a:focus {
+  color: $light-color;
+  text-decoration: none;
+}
+
+.list-dark,
+.list-dark a {
+  color: lighten($dark-color, 20);
+}
+
+.list-dark a:hover,
+.list-dark a:active,
+.list-dark a:focus {
+  color: $dark-color;
+  text-decoration: none;
+}
+
+ul.list-features {
+  font-size: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0.3rem 0 0.3rem 32px;
+    padding: 0;
+  }
+
+  li:before {
+    position: relative;
+    font-family: 'FontAwesome';
+    font-size: 1.1rem !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\f00c";
+    margin-left: -18px;
+    top: 0;
+    left: -10px;
+  }
+
+  &.list-s {
+    font-size: 1rem;
+
+    li {
+      margin: 0.1rem 0 0.1rem 26px;
+      padding: 0;
+    }
+
+    li:before {
+      font-size: 1rem !important;
+      margin-left: -20px;
+      top: 1px;
+      left: -10px;
+    }
+  }
+
+  &.list-l {
+    font-size: 1.4rem;
+
+    li {
+      margin: 0.4rem 0 0.4rem 32px;
+      padding: 0;
+    }
+
+    li:before {
+      font-size: 1.2rem !important;
+      margin-left: -18px;
+      left: -10px;
+    }
+  }
+
+  &.list-xl {
+    font-size: 1.8rem;
+
+    li {
+      margin: 0.5rem 0 0.5rem 34px;
+      padding: 0;
+    }
+
+    li:before {
+      font-size: 1.6rem !important;
+      margin-left: -18px;
+      top: 1px;
+      left: -12px;
+    }
+  }
+}

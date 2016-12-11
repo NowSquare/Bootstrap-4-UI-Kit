@@ -1,0 +1,15 @@
+
+/*
+ * Flat Surface Shader polygon background
+ */
+
+.polygon-bg {
+  * {
+    z-index: 1;
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+}

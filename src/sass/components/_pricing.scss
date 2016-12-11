@@ -1,0 +1,164 @@
+
+/*
+ * Pricing table related styles
+ */
+
+.pricing {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .pricing-overlay {
+    padding: 2rem 0;
+  }
+
+  &.pricing-padding-l {
+    .pricing-overlay {
+      padding: 3rem 0;
+    }
+  }
+
+  &.pricing-padding-xl {
+    .pricing-overlay {
+      padding: 4.5rem 0;
+    }
+  }
+
+  &.pricing-padding-xxl {
+    .pricing-overlay {
+      padding: 6rem 0;
+    }
+  }
+
+  .pricing-padding {
+    padding: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .pricing-padding {
+      padding: 1rem 0;
+    }
+  }
+
+  /*
+   * Style 1
+   */
+
+  &.pricing-style-1 {
+    h2, h3, h4, h5, td, p {
+      text-align: center;
+    }
+
+    .table {
+      border: 0;
+      margin: 0;
+      th, td {
+        border: 0;
+      }
+
+      hr {
+        margin: 1.5rem auto 0 auto;
+        width: 60%;
+        height: 2px;
+      }
+
+      thead {
+
+        /*
+         * Title
+         */
+
+        h2 {
+          margin: 1rem 0;
+        }
+
+        /*
+         * Description
+         */
+
+        p {
+        }
+      }
+
+      tbody:before,
+      tbody:after {
+        line-height: 2rem;
+        content: "\00a0";
+        display: block;
+      }
+
+      tfoot {
+
+        /*
+         * CTA
+         */
+
+        a {
+        }
+      }
+
+      /*
+       * Price
+       */
+
+      .price {
+        div {
+          font-size: 2.2rem;
+          text-align: center;
+          line-height: 8rem;
+          margin:auto;
+          width: 8rem;
+          height: 8rem;
+          background-color: #000;
+          color: #fff;
+          border-radius: 50%;
+          font-weight: 400;
+
+          small {
+            font-size:1rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+
+    @each $color in $color-list {
+  
+      $color-name: nth($color, 1);
+      $color-value: nth($color, 2);
+  
+      .color-#{$color-name} {
+        &.card,
+        hr {
+          border-color: transparentize($color-value, 0.5);
+        }
+
+        .price {
+          div {
+            background-color: $color-value;
+          }
+        }
+      }
+  
+      .bg-#{$color-name} {
+        color: #fff;
+        &.card {
+          border-color: $color-value;
+        }
+
+        hr {
+          border-color: lighten($color-value, 20);
+        }
+
+        .price {
+          div {
+            background-color: #fff;
+            color: $color-value;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,149 @@
+
+/*
+ * Card related styles
+ */
+
+.cards {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .cards-overlay {
+    padding: 2rem 0;
+  }
+
+  &.cards-padding-l {
+    .cards-overlay {
+      padding: 3rem 0;
+    }
+  }
+
+  &.cards-padding-xl {
+    .cards-overlay {
+      padding: 4.5rem 0;
+    }
+  }
+
+  &.cards-padding-xxl {
+    .cards-overlay {
+      padding: 6rem 0;
+    }
+  }
+
+  .cards-padding {
+    padding: 1rem;
+  }
+
+  .card-img-top {
+    padding: 3rem 3rem 0 3rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .cards-padding {
+      padding: 1rem 0;
+    }
+  }
+
+  .card {
+    h4 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 1rem 0;
+    }
+
+    .card-price {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &.cards-products {
+    .row {
+      .row > [class*='col-'] {
+        height: 100%;
+      }
+
+      .card {
+        height: 100%;
+        padding-bottom: 77px;
+
+        .card-footer {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+        }
+      }
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    .row > [class*='col-'] {
+      margin-bottom: 2rem !important;
+    }
+  }
+
+  &.cards-hover {
+    .card {
+      position: relative;
+      box-shadow: $mdl-shadow--4dp;
+      transition: all 0.1s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: $mdl-shadow--16dp;
+      top: -3px;
+    }
+  }
+
+  .card-block-link {
+  
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  
+    @include media-breakpoint-up(xs) {
+      h4 {
+        font-size: 1rem;
+      }
+      .block-icon {
+        font-size: 3rem;
+      }
+    }
+  
+    @include media-breakpoint-up(sm) {
+      h4 {
+        font-size: 1.2rem;
+      }
+      .block-icon {
+        font-size: 4.5rem;
+      }
+    }
+  
+    @include media-breakpoint-up(md) {
+      h4 {
+        font-size: 1.2rem;
+      }
+      .block-icon {
+        font-size: 5.2rem;
+      }
+    }
+  
+    @include media-breakpoint-up(lg) {
+      h4 {
+        font-size: 1.2rem;
+      }
+      .block-icon {
+        font-size: 6rem;
+      }
+    }
+  }
+}

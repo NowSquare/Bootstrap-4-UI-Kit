@@ -1,0 +1,55 @@
+
+/*
+ * Photo grid related styles
+ */
+
+.photos {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  a img {
+    position: relative;
+    box-shadow: $mdl-shadow--4dp;
+    transition: all 0.1s ease-in-out;
+  }
+
+  a img:hover {
+    box-shadow: $mdl-shadow--16dp;
+    margin-top: -3px;
+    margin-bottom: 3px;
+  }
+
+  .photos-overlay {
+    padding: 0 0;
+  }
+
+  &.photos-padding-l {
+    .photos-overlay {
+      padding: 1rem 0;
+    }
+  }
+
+  &.photos-padding-xl {
+    .photos-overlay {
+      padding: 2.5rem 0;
+    }
+  }
+
+  &.photos-padding-xxl {
+    .photos-overlay {
+      padding: 4rem 0;
+    }
+  }
+
+  .photos-padding {
+    padding: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .photos-padding {
+      padding: 1rem 0;
+    }
+  }
+}

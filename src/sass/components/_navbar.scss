@@ -1,0 +1,203 @@
+
+/*
+ * Navbar related styles
+ */
+
+$navbar-height: 4.5rem !default;
+
+@include media-breakpoint-down(sm) {
+  .navbar {
+    .nav-item.btn-group {
+      width: 100%;
+    }
+  }
+}
+
+.navbar {
+  border-radius: 0;
+  padding: 0 2rem 0;
+
+  /* Fix slide down jitter */
+  .collapsing {
+    width: 100%;
+  }
+
+  /* Hide default toggler */
+  .navbar-toggler {
+    background-image: none !important;
+    border: 0 !important;
+    position: relative;
+    top: 1rem !important;
+    line-height: 1rem !important;
+    cursor: pointer;
+  }
+  
+  // Light links against a dark background
+  &.navbar-dark {
+    .navbar-toggler,
+    .nav-link {
+      color: $light-color;
+    }
+  }
+
+  // Dark links against a light background
+  &.navbar-light {
+    .navbar-toggler,
+    .nav-link {
+      color: $dark-color;
+    }
+  }
+
+  .nav-item .nav-link {
+    padding: 0 5px;
+  }
+
+  .nav-item.active .nav-link,
+  .nav-item.active:hover .nav-link {
+    background-color: darken($light-color, 10);
+    color: $dark-color;
+  }
+
+  .navbar-nav > li > a.nav-link {
+    display: inline-block;
+    position: relative;
+    line-height: $navbar-height;
+  }
+
+  .navbar-nav > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background .3s ease;
+  }
+
+  .navbar-nav > li:hover > a:before {
+    width: 100%;
+    background: $dark-color;
+    transition: width .3s ease;
+  }
+
+  &.bg-inverse {
+    .navbar-nav > li:hover > a:before {
+      background: darken($light-color, 20) !important;
+    }
+
+    .nav-item.active .nav-link,
+    .nav-item.active:hover .nav-link {
+      background-color: darken($dark-color, 10);
+      color: $light-color;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .nav-item.btn-group:hover .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: $navbar-height;
+  }
+
+  .navbar-toggler {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: $navbar-height;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .nav,
+    .nav .nav-link {
+      width: 100%;
+    }
+    .nav-item .nav-link {
+      padding: 0 15px;
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: 0rem;
+    border: 0;
+    padding: 0;
+    box-shadow: $mdl-shadow--6dp;
+    border-radius: 0;
+
+    .dropdown-item {
+      padding: 10px 20px;
+    }
+
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+      color: $light-color;
+      background-color: $dark-color;
+    }
+  }
+
+  &.bg-transparent {
+    background-color: transparent !important;
+
+    .nav-item.active .nav-link,
+    .nav-item.active:hover .nav-link {
+      background-color: transparent !important;
+    }
+
+    .nav-item .nav-link {
+      color: $dark-color;
+    }
+  }
+
+  @each $color in $color-list {
+
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+
+    &.bg-#{$color-name} {
+      background-color: $color-value;
+      .dropdown-menu {
+        .dropdown-item:focus,
+        .dropdown-item:hover {
+
+          @if $color-name == "yellow" {
+            color: $dark-color;
+          } @else {
+            color: $light-color;
+          }
+
+          background-color: $color-value;
+        }
+      }
+      .navbar-nav > li:hover > a:before {
+        background: darken($color-value, 20);
+      }
+      .nav-item.active .nav-link,
+      .nav-item.active:hover .nav-link {
+        background-color: darken($color-value, 10);
+
+        @if $color-name == "yellow" {
+          color: $dark-color;
+        } @else {
+          color: $light-color;
+        }
+      }
+  
+      &.bg-transparent {
+        .navbar-nav > li:hover > a:before {
+          background: $color-value;
+        }
+        .navbar-toggler,
+        .nav-item:hover .nav-link,
+        .nav-item.active .nav-link,
+        .nav-item.active:hover .nav-link {
+          color: $color-value;
+        }
+      }
+    }
+  }
+}

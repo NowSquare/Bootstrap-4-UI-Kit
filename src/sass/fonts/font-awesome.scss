@@ -1,0 +1,9 @@
+/*!
+ * Font Awesome (http://fontawesome.io/)
+ */
+
+$enable-flex: false;
+
+$fa-font-path: "../fonts/font-awesome" !default;
+
+@import "../../../bower_components/font-awesome/scss/font-awesome";

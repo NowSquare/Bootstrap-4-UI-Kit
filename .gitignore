@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+/node_modules
+/bower_components
+_notes
+.sass-cache
+npm-debug.log
+.idea
+/src/psd-wip/
+/updates.txt
+/update.txt

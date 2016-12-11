@@ -1,0 +1,16 @@
+{
+  "name": "NowSquare Web Blocks",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.5",
+    "font-awesome": "fontawesome#^4.7.0",
+    "ekko-lightbox": "^4.0.2",
+    "parsleyjs": "^2.4.4",
+    "material-color": "^2.3.1",
+    "owl.carousel": "^2.1.6",
+    "typed.js": "^1.1.4",
+    "particles.js": "^2.0.0",
+    "flat-surface-shader": "*",
+    "animatewithsass": "^3.2.2"
+  }
+}
