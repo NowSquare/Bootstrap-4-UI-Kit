@@ -1,6 +1,8 @@
 # Bootstrap 4 Creative UI Kit
 **Jumpstart your Bootstrap 4 project with this free collection of responsive web blocks.**
 
+![Bootstrap UI Kit](visual-header.png)
+
 Easy to work with and built upon Bower, GulpJS and Sass. Unlimited combinations and easy to customize. Create responsive websites with predefined html web blocks.
 
 ## Getting started
@@ -10,6 +12,8 @@ Copy the source the starter template (`html/template-blank.html`) to a file in y
  - `/awesome-project/index.html`
 
 You can now start copying blocks from files in the `html` directory to your project file. Explore blocks by opening `html/index.html`.
+
+![Preview](visual-blocks.png)
 
 ## Build from source
 
