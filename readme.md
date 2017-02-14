@@ -37,6 +37,9 @@ After you've downloaded the project, navigate to the root directory with your CL
 #### Install Bower JavaScript libraries
 `$ bower install`
 
+#### Troubleshooting
+If you get the error `'sass' is not recognized as an internal or external command` when executing `gulp styles`, you have to install [Ruby](https://rubyinstaller.org). After installation execute `gem install sass` in your CLI.
+
 ### Modify CSS
 Open the main Sass file `src/sass/style.scss` and modify it to suit your needs. After your changes, run `$ gulp styles` in your CLI to compile the new CSS to the `html/assets/css` directory. Open `gulpfile.js` for more details on what's going on.
 
