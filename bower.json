@@ -2,7 +2,7 @@
   "name": "NowSquare Web Blocks",
   "version": "1.0.0",
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.5",
+    "bootstrap": "v4.0.0-alpha.6",
     "font-awesome": "fontawesome#^4.7.0",
     "ekko-lightbox": "^4.0.2",
     "parsleyjs": "^2.4.4",
